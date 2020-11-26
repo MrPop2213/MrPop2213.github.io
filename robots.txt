@@ -1,0 +1,5 @@
+# All crawlers
+User-agent: *
+Disallow:
+
+Sitemap: http://omegalambda.com.au/sitemap.xml
