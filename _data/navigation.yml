@@ -1,6 +1,6 @@
-- name: Articles
+- name: Articles 
   link: /articles/
 - name: Projects
   link: /projects/
-- name: Papers
+- name: Papers <sup><i class="fa fa-external-link" aria-hidden="true" style="font-size:xx-small;"></i></sup>
   link: /papers/
