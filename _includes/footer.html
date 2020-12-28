@@ -1,7 +1,7 @@
 <footer class="footer">
     <ul>
         {% for item in site.data.footer %}
-            <li><a href="{{item.link}}" aria-label="{{item.desc}}"><i class="{{item.icon}}" aria-hidden="true" title="{{item.desc}}"></i></a></li>
+        <li><div class="pseudo"><a href="{{item.link}}" aria-label="{{item.desc}}"><i class="{{item.icon}}" aria-hidden="true" title="{{item.desc}}"></i></a></div></li>
         {% endfor %}
     </ul>
     <script src="/_includes/assets/js/codeblock.js"></script>

@@ -3,14 +3,14 @@
     {% if page.url == "/" %}
         {% assign class = class | append: " active" %}
     {% endif %}
-    <a href="/" class = "{{ class }}"><font size="+2">Home</font></a>
+    <div class=home><div class=pseudo><a href="/" class = "{{ class }}">Home</a></div></div>
     <ul>
         {% for item in site.data.navigation %}
             {% assign class = "" %}
             {% if page.url == item.link %}
                 {% assign class = class | append: " active" %}
             {% endif %}
-            <li><a href="{{ item.link }}" class="{{ class }}" style="font-size: large;">{{ item.name }}</a></li>
+            <li><div class=pseudo><a href="{{ item.link }}" class="{{ class }}" style="font-size: large;">{{ item.name }}</a></div></li>
         {% endfor %}
     </ul>
 </nav>

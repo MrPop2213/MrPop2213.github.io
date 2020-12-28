@@ -3,13 +3,14 @@ title: Projects
 ---
 <h1>Projects</h1>
 <hr style="width:500px; color: {{ site.bright_colour }}">
-<ul class="linklist">
-  {% for project in site.projects %}
-  <li>
-      <a href="{{ project.url }}" class=link>
-          <h2>{{ project.title }}</h2>
-          <h3>{{ project.subtitle }}</h3>
-      </a>
-  </li>
-  {% endfor %}
-</ul>
+<div class=cardparent>
+    {% for project in site.projects %}
+    <div class=card>
+        <a href="{{ project.url }}" class=link>
+            <div class=cardimg><img src={{ project.img }} alt="{{ project.title }}" width=100% class=cardimg></div>
+            <div class=cardtitle><h2>{{ project.title }}</h2></div>
+            <div class=carddescription><h3>{{ project.subtitle }}</h3></div>
+        </a>
+    </div>
+    {% endfor %}
+</div>

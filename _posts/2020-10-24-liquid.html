@@ -2,6 +2,7 @@
 author: Patrick Armstrong
 title: Using Liquid & Javascript to automate codeblocks
 description: Automatic codeblocks for the <del>lazy</del> <ins>efficient</ins>!
+img: /_includes/assets/images/Liquid.webp
 ---
 <p>
 In my last <a href="{% post_url 2020-10-18-codeblocks %}">post</a> I showed how to use the Liquid <code class="inline">include</code> commands to automatically load text from a file into codeblocks. In this post I'm going to show you how I used liquid and javascript to extend this and add a bunch of functionality!
@@ -90,7 +91,7 @@ The perks of doing this with Liquid instead of Javascript is Liquid runs during 
 <p>
 There are a number of things which would be difficult, bordering on impossible, to implement with this jekyll function implementation. In these cases we can move over to Javascript which is a much more powerful language (in that it actually is a language). In order to make use of this code, I wrap my <code class="inline">highlight</code> block with <code class="inline">&lt;div class="codeparent"&gt;</code>, adding in any data attributes we want to include. The following codeblock shows the full javascript file I used to add this new functionality:
 </p>
-<div class="codeparent" data-download="/assets/js/codeblock.js">
+<div class="codeparent" data-download="/_includes/assets/js/codeblock.js">
     {% highlight javascript linenos %}{% include /functions/codeblock.html file="/assets/js/codeblock.js" %}{% endhighlight %}
 </div>
 <h3>Display Language</h3>

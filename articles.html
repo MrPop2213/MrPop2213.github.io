@@ -3,13 +3,14 @@ title: Articles
 ---
 <h1>Latest Articles</h1>
 <hr style="width:500px; color: {{ site.bright_colour }}">
-<ul class="linklist">
-  {% for post in site.posts %}
-    <li>
+<div class=cardparent>
+    {% for post in site.posts %}
+    <div class=card>
         <a href="{{ post.url }}" class=link>
-            <h2>{{ post.title }}</h2>
-            <h3>{{ post.description }}</h3>
+            <div class=cardimg><img src={{ post.img }} alt="{{ post.title }}" width=100% class=cardimg></div>
+            <div class=cardtitle><h2>{{ post.title }}</h2></div>
+            <div class=carddescription><h3>{{ post.description }}</h3></div>
         </a>
-    </li>
-  {% endfor %}
-</ul>
+    </div>
+    {% endfor %}
+</div>
