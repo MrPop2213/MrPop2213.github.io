@@ -116,11 +116,13 @@ footer ul {
 }
 
 nav ul li { /* Navigation bar item */
+    width: 12.5%;
     display: inline-block;
     border-right: 1px solid {{ site.white_colour }}; /* Place a border on the right of the link */
 }
 
 footer ul li {
+    width: 7.5%;
     display: inline-block;
     border-right: 1px solid {{ site.white_colour }};
 }
@@ -163,6 +165,8 @@ nav div.home {
     position: fixed;
     float: left;
     top: 0;
+    width: 12%;
+    text-align: center;
     border-right: 1px solid {{ site.white_colour }};
     div.pseudo {
         padding: 12px;
@@ -172,8 +176,8 @@ nav div.home {
 nav a.home {
     color: {{ site.white_colour }};
     text-decoration: none;
-    font-weight: bold;
     font-size: 1.5em;
+    font-weight: bold;
 }
 
 div.post {
