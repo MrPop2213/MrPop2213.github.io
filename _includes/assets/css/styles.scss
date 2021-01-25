@@ -1,6 +1,24 @@
 ---
 ---
 
+html {
+    width: 100%;
+    height: 100%;
+    min-height: 100%;
+}
+
+body {
+    width: 100%;
+    height: 100%;
+    min-height: 100%;
+    padding: 0;
+    margin: 0 auto;
+    background-color: {{ site.white_colour }};
+    font-family: "arial";
+    display: flex;
+    flex-direction: column;
+}
+
 @font-face {
     font-display: swap;
 }
@@ -49,15 +67,21 @@ footer { /* General navigation bar */
     display: -moz-flex;
     display: -webkit-flex;
     display: flex;
-    z-index: 100;
 
     -webkit-justify-content: space-between; 
     justify-content: space-between; 
 }
 
+div.content {
+    flex: auto;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+    text-align: center;
+    vertical-align: middle;
+    color: {{ site.black_colour }};
+}
+
 nav ul { /* Navigation bar list */
-    position: fixed;
-    top: 0;
     width: 100%;
     list-style-type: none; /* The list marker */
     margin: 0 auto;
@@ -76,8 +100,6 @@ nav ul { /* Navigation bar list */
 }
 
 footer ul {
-    position: fixed;
-    bottom: 0;
     width: 100%;
     list-style-type: none;
     margin: 0 auto;
@@ -91,10 +113,6 @@ footer ul {
     justify-content: flex-end;
     -webkit-justify-conent: flex-end;
     background: linear-gradient(180deg, black, black, black, {{ site.dark_colour }}, {{ site.mid_colour }}, {{ site.bright_colour }})
-}
-
-nav {
-    z-index: 100;
 }
 
 nav ul li { /* Navigation bar item */
@@ -158,21 +176,12 @@ nav a.home {
     font-size: 1.5em;
 }
 
-body {
-    width: 100%;
-    height: 100%;
-    padding: 0;
-    margin: 0 auto;
-    background-color: {{ site.white_colour }};
-    font-family: "arial"
-}
-
-div.content {
-    padding: 10px;
-    padding-top: 50px;
-    text-align: center;
-    vertical-align: middle;
-    color: {{ site.black_colour }};
+div.post {
+    margin-top: 2%;
+    margin-bottom: 2%;
+    margin-left: 2%;
+    margin-right: 2%;
+    box-shadow: 0 1px 10px {{ site.dark_colour }}, 0 1px 10px {{ site.dark_colour }};
 }
 
 div.titlepage {
@@ -189,11 +198,6 @@ div.postcontent {
     color: {{ site.dark_colour }};
 }
 
-div.post {
-    margin-top: 20px;
-    margin-bottom: 45px;
-    box-shadow: 0 1px 10px {{ site.dark_colour }}, 0 1px 10px {{ site.dark_colour }};
-}
 
 a.link {
     display: inline-block;
@@ -222,6 +226,8 @@ div.cardparent {
     display: flex;
     flex-wrap: wrap;
     justify-content: flex-start;
+    padding-left: 5%;
+    padding-right: 5%;
 }
 
 div.card {
