@@ -24,7 +24,12 @@ body {
 }
 
 .pseudo {
+    height: 100%;
     position: relative;
+    display: flex;
+    align-items: stretch;
+    justify-content: center;
+    width: 100%;
     z-index: 1;
     background: linear-gradient(180deg, black, black, black, {{ site.dark_colour }}, {{ site.mid_colour }}, {{ site.bright_colour }});
 }
@@ -54,6 +59,7 @@ nav { /* General navigation bar */
     display: -moz-flex;
     display: -webkit-flex;
     display: flex;
+    align-items: stretch;
 
     -webkit-justify-content: space-between; 
     justify-content: space-between; 
@@ -73,8 +79,8 @@ footer { /* General navigation bar */
 }
 
 div.content {
-    flex: auto;
     overflow-y: auto;
+    flex: auto;
     -webkit-overflow-scrolling: touch;
     text-align: center;
     vertical-align: middle;
@@ -83,6 +89,7 @@ div.content {
 
 nav ul { /* Navigation bar list */
     width: 100%;
+    height: 100%;
     list-style-type: none; /* The list marker */
     margin: 0 auto;
     padding: 0;
@@ -117,7 +124,9 @@ footer ul {
 
 nav ul li { /* Navigation bar item */
     width: 12.5%;
-    display: inline-block;
+    height: 100%;
+    display: flex;
+    align-items: stretch;
     border-right: 1px solid {{ site.white_colour }}; /* Place a border on the right of the link */
 }
 
@@ -144,7 +153,8 @@ footer ul li:last-child {
 }
 
 nav ul li a { /* Navigation bar hyperlink */
-    display: inline-block;
+    display: flex;
+    align-items: center;
     color: {{ site.white_colour }};
     text-align: center;
     padding: 16px;
@@ -152,29 +162,35 @@ nav ul li a { /* Navigation bar hyperlink */
 }
 
 footer ul li a {
-    display: inline-block;
+    display: flex;
+    align-items: center;
     color: {{ site.white_colour }};
     text-align: center;
     text-decoration: none;
     padding: 12px;
 }
 
-nav div.home {
+div.home {
     z-index: 1;
-    display: inline-block;
-    position: fixed;
-    float: left;
-    top: 0;
+    display: flex;
+    flex-grow: 1;
     width: 12%;
     text-align: center;
-    border-right: 1px solid {{ site.white_colour }};
     div.pseudo {
-        padding: 12px;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        border-right: 1px solid {{ site.white_colour }};
     }
 }
 
 nav a.home {
     color: {{ site.white_colour }};
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     text-decoration: none;
     font-size: 1.5em;
     font-weight: bold;
